@@ -7,13 +7,13 @@ const Game = ({verifyLetter}) => {
         <p className="points">
           <span>Pontuação: 000</span>
         </p>
-        <h1>Advinhe a palavra</h1>
+        <h1>Adivinhe a palavra</h1>
         <h3 className="tip">
-          Dica sobre a palavra: <span>DIca...</span>
+          Dica sobre a palavra: <span>Dica...</span>
         </h3>
         <div className="wordContainer">
-          <span className="letter">A</span>
-          <span className="blankSquare">B</span>
+          <span className="letter">a</span>
+          <span className="blankSquare">b</span>
         </div>
         <div className="letterContainer">
           <p>Tente advinhar a letra da palavra</p>
