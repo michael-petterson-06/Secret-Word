@@ -1,10 +1,11 @@
 import React from 'react';
 import '../styles/Game.css';
 
-const Game = () => {
+const Game = ({verifyLetter}) => {
   return (
     <div>
-      Game
+      <h1>Game</h1>
+      <button onClick={verifyLetter}>Finalizar jogo</button>
     </div>
   )
 }
