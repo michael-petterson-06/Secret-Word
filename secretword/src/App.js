@@ -40,23 +40,19 @@ function App() {
   }
 
   const startGame = () => {
-
     const {category, word } = pickWordAndCategory()
-
     let wordLetters = word.split('');
-
     wordLetters = wordLetters.map((Letter) => Letter.toLowerCase())
-
     setPickedWord(word);
     setPickedCategory(category);
     setLetters(wordLetters);
-
     setGameStage(stages[1].name);
   }
 
 
-  const verifyLetter = () => {
-    setGameStage(stages[2].name)
+  const verifyLetter = (letter) => {
+    
+    // setGameStage(stages[2].name)
   }
   
 
