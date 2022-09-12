@@ -51,15 +51,31 @@ function App() {
 
 
   const verifyLetter = (letter) => {
+    const normalizeLetter = letter.toLowerCase();
+    if (
+      guessedLetters.includes(normalizeLetter) || 
+      wrongLetters.includes(normalizeLetter)
+    ){ return; }
+
+    if (letters.includes(normalizeLetter)) {
+      setGuessedLetters((actuaGuessedLetters) => [
+        ...actuaGuessedLetters, normalizeLetter
+      ])
+    } else {
+      setWrongLetters((actuaWrongLetters) => [
+        ...actuaWrongLetters, normalizeLetter
+      ]) 
+    }
+
     
-    // setGameStage(stages[2].name)
   }
-  
+    
 
   const retry = () => {
     setGameStage(stages[0].name)
   }
 
+  
   return (
     <div className="App">
       { gameStage === 'start' && <StartScreen startGame={startGame}/>}    
