@@ -22,7 +22,7 @@ const Game = ({
     setLetter('');
     letterInputRef.current.focus();
   }
- 
+
   return (
     <div className="game">
         <p className="points">
@@ -36,7 +36,7 @@ const Game = ({
         <div className="wordContainer">
           {letters.map((letter, i) => 
             guessedLetters.includes(letter) ? (
-              <span key={i} className='letter'>
+              <span key={i} className='blankSquare'>
                 {letter}
               </span>
             ) : (
